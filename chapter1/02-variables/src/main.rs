@@ -6,6 +6,8 @@ fn main() {
 }
 
 fn basic() {
+    // Variable names are always in snake_case.
+
     // rust infers the type of x
     let x = 13;
     println!("{}", x);
