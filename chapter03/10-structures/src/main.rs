@@ -1,5 +1,22 @@
 fn main() {
     println!("==== structures ====");
+    let ferris = SeaCreature {
+        animal_type: String::from("crab"),
+        name: String::from("Ferris"),
+        arms: 2,
+        legs: 4,
+        weapon: String::from("claw"),
+    };
+
+    println!(
+        "{} is a {}. They have {} arms, {} legs, and a {} weapon",
+        ferris.name, ferris.animal_type, ferris.arms, ferris.legs, ferris.weapon
+    );
+
+    println!("==== struct like a tuple ====");
+    // This is still a struct on a stack
+    let loc = Location(42, 32);
+    println!("{}, {}", loc.0, loc.1);
 }
 
 // A struct is a collection of fields.
@@ -13,3 +30,6 @@ struct SeaCreature {
     legs: i32,
     weapon: String,
 }
+
+// you can create structs that are used like a tuple.
+struct Location(i32, i32);
