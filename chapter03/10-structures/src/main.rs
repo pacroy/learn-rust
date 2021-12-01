@@ -17,6 +17,9 @@ fn main() {
     // This is still a struct on a stack
     let loc = Location(42, 32);
     println!("{}, {}", loc.0, loc.1);
+
+    println!("==== unit-like struct ====");
+    let _m = Marker;
 }
 
 // A struct is a collection of fields.
@@ -33,3 +36,8 @@ struct SeaCreature {
 
 // you can create structs that are used like a tuple.
 struct Location(i32, i32);
+
+// Unit-like struct
+//   Structs do not have to have any fields at all.
+//   `unit` is another word for an empty tuple ().
+struct Marker;
